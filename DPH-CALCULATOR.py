@@ -35,7 +35,8 @@ def dph():
         print(f"Major audiovisual hallucinations:---{major_audiovisual}mg ({syrup_dose(major_audiovisual)} ml)")
         print(f"Mild delirium/Potential psychosis:--{partial_delirium}mg ({syrup_dose(partial_delirium)} ml)")
         print(f"Total delirium/Psychosis:-----------{total_delirium}mg ({syrup_dose(total_delirium)} ml)")
-
+        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
+        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
 
     elif med_type == 1:
         pill_type = int(input("Pill type? 50mg(1) or 25mg(2) or 12.5mg(3)"))
@@ -119,6 +120,8 @@ def dxm():
         print(f"Fourth plateau:---{rounding(fourth_plateau_min)}mg ({fourth_plateau_min_pill}pills) - {rounding(fourth_plateau_max)}mg ({fourth_plateau_max_pill}pills)")
         print(f"Plateau Sigma:----{rounding(sigma_plateau)}mg ({sigma_plateau_pill}pills)")
         print("The previous amount surpasses the lethal dose 50. May be deadly")
+        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
+        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
 
     elif med_type_dxm == 2:
 
@@ -138,13 +141,8 @@ def dxm():
         print(f"Fourth plateau:---{rounding(fourth_plateau_min)}mg ({fourth_plateau_min_ml}ml) - {rounding(fourth_plateau_max)}mg ({fourth_plateau_max_ml}ml)")
         print(f"Plateau Sigma:----{rounding(sigma_plateau)}mg ({sigma_plateau_ml}ml)")
         print("The previous amount surpasses the lethal dose 50. May be deadly")
-
-    #First Plateau dose: 1.5-2.5mg/kg.
-    #Second Plateau dose: 2.5-7.5mg/kg
-    #Third Plateau dose: 7.5-15 mg/kg.
-    #Fourth Plateau dose: 15mg/kg-20mg/kg. Higher is possible, but not advised, because risk of death around 25mg/kg, but varies slightly from person to person
-    #plateau sigma is probably around 25mg/kg although probably deadly.
-    #lbs to kg conversion is 0.4536
+        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
+        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
 
 meds = int(input("Are you taking DPH(1) or DXM(2)?: "))
 if meds == 1:
@@ -154,11 +152,7 @@ elif meds == 2:
 else:
     print("Invalid option, more drugs will be supported soon")
     print("Re-run program")
-
-
-
-
-
+    
 # Thank you too:
 # DPH calculators 1.0 and 2.0
 # The DPH guide that helped me piece together information
