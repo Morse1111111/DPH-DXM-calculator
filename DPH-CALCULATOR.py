@@ -1,7 +1,7 @@
 print("To exit calculator, enter '0' in the menu")
 
 def dph():
-
+#dph function
     unit = float(input("Pounds(1) or kilograms (2)?:  "))
     weight = float(input("Input weight: "))
     if unit == 2:
@@ -68,10 +68,11 @@ def dph():
         print(f"Total delirium/Psychosis:-----------{total_delirium}mg ({round_pill(total_delirium)} pills) ")
         
 def dxm():
+#dxm function
     unit = int(input("Pounds(1) or kilograms(2)?: "))
     weight = float(input("Input weight?: "))
     med_type_dxm = int(input("Pill(1) or syrup(2)?: "))
-
+#figuring out weight and dose calculations
     if unit == 1:
         weight *= 0.4536
     first_plateau_min = weight * 1.5
@@ -79,7 +80,7 @@ def dxm():
     third_plateau_min = weight * 7.5
     fourth_plateau_min = weight * 15
     sigma_plateau = weight * 25
-
+#finding out the min and max of the dxm dosage
     first_plateau_max = second_plateau_min - 1
     second_plateau_max = third_plateau_min - 1
     third_plateau_max = fourth_plateau_min - 1
@@ -91,9 +92,7 @@ def dxm():
         syrup_mg = float(input("What is your syrup Mg value (MG/ml)?:"))
         syrup_ml = float(input("what is your syrup Ml value (mg/ML)"))
         syrup_strength = syrup_mg / syrup_ml
-    else:
-        print("Invalid input, please restart program.")
-        return
+
 
     def rounding(balls2):
         dose = balls2 * 25
@@ -137,7 +136,7 @@ def dxm():
         print(f"Fourth plateau:---{rounding(fourth_plateau_min)}mg ({fourth_plateau_min_ml}ml) - {rounding(fourth_plateau_max)}mg ({fourth_plateau_max_ml}ml)")
         print(f"Plateau Sigma:----{rounding(sigma_plateau)}mg ({sigma_plateau_ml}ml)")
         print("The previous amount surpasses the lethal dose 50. May be deadly")
-       
+        
 while True:
     meds = int(input("Are you taking DPH(1) or DXM(2)?: "))
     if meds == 0:
@@ -145,12 +144,7 @@ while True:
         break
     elif meds == 1:
         dph()
-        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
-        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
     elif meds == 2:
         dxm()
-        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
-        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
     else:
         print("Invalid option, more drugs will be supported soon")
-        print("Re-run program")
