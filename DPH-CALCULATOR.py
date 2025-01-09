@@ -1,3 +1,5 @@
+print("To exit calculator, enter '0' in the menu")
+
 def dph():
 
     unit = float(input("Pounds(1) or kilograms (2)?:  "))
@@ -144,16 +146,15 @@ def dxm():
         print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
         print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
 
-meds = int(input("Are you taking DPH(1) or DXM(2)?: "))
-if meds == 1:
-    dph()
-elif meds == 2:
-    dxm()
-else:
-    print("Invalid option, more drugs will be supported soon")
-    print("Re-run program")
-    
-# Thank you too:
-# DPH calculators 1.0 and 2.0
-# The DPH guide that helped me piece together information
-# Most of all: my Com Sci Teacher if you ever find this. Thank you for always teaching me. if you ever forget who I am, remember the front right most corner from your desk pov, period one. This is what i was working on.
+while True:
+    meds = int(input("Are you taking DPH(1) or DXM(2)?: "))
+    if meds == 0:
+        print("Thank you for using, stay safe :)")
+        break
+    elif meds == 1:
+        dph()
+    elif meds == 2:
+        dxm()
+    else:
+        print("Invalid option, more drugs will be supported soon")
+        print("Re-run program")
