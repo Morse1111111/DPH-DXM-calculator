@@ -37,9 +37,7 @@ def dph():
         print(f"Major audiovisual hallucinations:---{major_audiovisual}mg ({syrup_dose(major_audiovisual)} ml)")
         print(f"Mild delirium/Potential psychosis:--{partial_delirium}mg ({syrup_dose(partial_delirium)} ml)")
         print(f"Total delirium/Psychosis:-----------{total_delirium}mg ({syrup_dose(total_delirium)} ml)")
-        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
-        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
-
+        
     elif med_type == 1:
         pill_type = int(input("Pill type? 50mg(1) or 25mg(2) or 12.5mg(3)"))
         if pill_type == 3:
@@ -68,9 +66,7 @@ def dph():
         print(f"Major audiovisual hallucinations:---{major_audiovisual}mg ({round_pill(major_audiovisual)} pills) ")
         print(f"Mild delirium/Potential psychosis:--{partial_delirium}mg ({round_pill(partial_delirium)} pills) ")
         print(f"Total delirium/Psychosis:-----------{total_delirium}mg ({round_pill(total_delirium)} pills) ")
-        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
-        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
-
+        
 def dxm():
     unit = int(input("Pounds(1) or kilograms(2)?: "))
     weight = float(input("Input weight?: "))
@@ -122,9 +118,7 @@ def dxm():
         print(f"Fourth plateau:---{rounding(fourth_plateau_min)}mg ({fourth_plateau_min_pill}pills) - {rounding(fourth_plateau_max)}mg ({fourth_plateau_max_pill}pills)")
         print(f"Plateau Sigma:----{rounding(sigma_plateau)}mg ({sigma_plateau_pill}pills)")
         print("The previous amount surpasses the lethal dose 50. May be deadly")
-        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
-        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
-
+        
     elif med_type_dxm == 2:
 
         first_plateau_min_ml = int(first_plateau_min / syrup_strength)
@@ -143,9 +137,7 @@ def dxm():
         print(f"Fourth plateau:---{rounding(fourth_plateau_min)}mg ({fourth_plateau_min_ml}ml) - {rounding(fourth_plateau_max)}mg ({fourth_plateau_max_ml}ml)")
         print(f"Plateau Sigma:----{rounding(sigma_plateau)}mg ({sigma_plateau_ml}ml)")
         print("The previous amount surpasses the lethal dose 50. May be deadly")
-        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
-        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
-
+       
 while True:
     meds = int(input("Are you taking DPH(1) or DXM(2)?: "))
     if meds == 0:
@@ -153,8 +145,12 @@ while True:
         break
     elif meds == 1:
         dph()
+        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
+        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
     elif meds == 2:
         dxm()
+        print("DO NOT RE-DOSE UNTIL AT LEAST 48 HOURS AFTER INITIAL DOSE")
+        print("DO NOT GO OVER DOSE AMOUNT, FOLLOW MEASUREMENTS CAREFULLY")
     else:
         print("Invalid option, more drugs will be supported soon")
         print("Re-run program")
