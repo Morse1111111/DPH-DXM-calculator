@@ -1,5 +1,3 @@
-print("To exit calculator, enter '0' in the menu")
-
 def dph():
 #dph function
     unit = float(input("Pounds(1) or kilograms (2)?:  "))
@@ -138,13 +136,16 @@ def dxm():
         print("The previous amount surpasses the lethal dose 50. May be deadly")
         
 while True:
+    print("To exit calculator, enter '0' in the menu")
     meds = int(input("Are you taking DPH(1) or DXM(2)?: "))
     if meds == 0:
         print("Thank you for using, stay safe :)")
         break
     elif meds == 1:
         dph()
+        print("All dosages are estimates from online resources and assuming no tolerance")
     elif meds == 2:
         dxm()
+        print("All dosages are estimates from online resources and assuming no tolerance")
     else:
         print("Invalid option, more drugs will be supported soon")
